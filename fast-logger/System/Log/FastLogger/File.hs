@@ -1,10 +1,10 @@
-{-# LANGUAGE Safe #-}
+{-# LANGUAGE Trustworthy #-}
 
 module System.Log.FastLogger.File where
 
-import Control.Monad (unless, when)
+import safe Control.Monad (unless, when)
 import System.Directory (doesFileExist, doesDirectoryExist, getPermissions, writable, renameFile)
-import System.FilePath (takeDirectory)
+import safe System.FilePath (takeDirectory)
 
 -- | The spec for logging files
 data FileLogSpec = FileLogSpec {
